@@ -9,41 +9,193 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     
+    
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style> video {
         max-width: 100%; height: auto;
-        } </style>
+        } 
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}    
+    
+    </style>
 </head>
 <body>
 
 <div class="jumbotron text-center">
   <h1>DBLJ 18</h1>
-  <p>!Music is LYFE!</p> 
+  <p>!ARTS and MUSIC is LYFE!</p> 
 </div>
   
-<div class="container">
+    <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openCity(event, 'My Works')">My Works</button>
+  <button class="tablinks" onclick="openCity(event, 'Other...')">Other...</button>
+</div>
+    
+    <div id="Home" class="tabcontent">
+    <div class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4" style="background-color:rgba(255, 255, 0,	0.8);">
       <h3>D or L</h3>
       <p>I see you today on the street full of flowers, Will it be me? I'm putting my feelings in the park after the early morning moon. This song is headed for you, I hear the sounds of film from the moon at night.</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" style="background-color:rgba(255, 99, 71, 0.8);">
       <h3>90318</h3>
       <p> <video width="400" controls> 
           <source src="Images/Scenery%20By%20V%20(BTS).mp4" type="video/mp4">
           </video> </p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" style="background-color:rgba(128, 0, 255, 0.8);">
       <h3>B or J</h3>
-      <p>I still wonder, wonder beautiful story, still wonder, wonder best part. And I still wonder, wonder next story, I want to make you mine. If you leave your foorprints, I'll keep you warm. I'll leave it in Black and White.</p>
-    </div>
+    <p>I still wonder, wonder beautiful story, still wonder, wonder best part. And I still wonder, wonder next story, I want to make you mine. If you leave your foorprints, I'll keep you warm. I'll leave it in Black and White.</p>
+      </div>
       
       <div class="gallery">
           <a target="_blank" href="Images/DBJL18.png"> 
             <img src="Images/DBJL18.png" width="900" height="auto">
           </a>
+        </div>
+        </div>
+        </div>
     </div>
-  </div>
-</div>  
+    
+    <div id="My Works" class="tabcontent">
+        <p>Here are some of my works. my logo, edits, and pictures. i hope you like it ^^</p>
+    <div class="gallery">
+      <a target="_blank" href="Images/sketch-1533707892166.png">
+        <img src="Images/sketch-1533707892166.png" width="600" height="auto">
+        </a>
+      </div>
+    <div class="gallery">
+        <a target="_blank" href="Images/DSC_0502.JPG">
+        <img src="Images/DSC_0502.JPG" width="600" height="auto">
+        </a>
+        </div>
+    <div class="gallery">
+        <a target="_blank" href="Images/care-for-bunny.jpg">
+        <img src="Images/care-for-bunny.jpg" width="600" height="auto">
+        </a>
+        </div>
+</div>
+    
+    <div id="Other..." class="tabcontent">
+        <video autoplay loop id="myVideo">
+        <source src="Images/Scenery%20By%20V%20(BTS).mp4" type="video/mp4">
+        </video>
+        <p>Click this ⬇⬇⬇⬇ to play the Video!!!</p>
+        <button id="myBtn" onclick="myFunction() ">Pause</button>
+        <p> ⬇⬇⬇⬇⬇⬇⬇⬇ Here's some quotes that i got, have and that i made.</p>
+        <p>  Feel like I'm your cat, I'm your dog
+        with my two eyes, i can only see you
+        Our relationship isn't serendipitous, but indistinct
+        I don't wanna be just friends
+        I don't want to leave you, Can I be your pet?</p>
+        <p> I don't care what others say anymore i will my all to you, I have nothing to lose anyways, but if i didnt give you my all, i might lose you.</p>
+        <p>I promise i might not be perfect but i'll be a better person than yesterday.</p>
+        <p> If you can't fly, run. If you can't run, walk. If you can't walk, crawl, Even if you have to crawl, gear up. Hey silverspoons hands up, hye friends, hands up, hey, if you trust me, put your hands up. we wont give, no not today. Point, Aim and Shoot!</p>
+        <p>If i treated you the way you treated me, you would hate me.</p>
+        <p>It's okay come on when i say one two three forget it, erase all sad memories hold my hand and smile.</p>
+        <p>Work like you don't need the money, love like you have never been hurt beofore.</p>
+        <p>The strongest person can have the weakest heart you have ever touched. The person who is the happiest and has biggest smile can have the saddest story you've never heard.</p>
+        <p>You were born as a hero, why are you trying to become a slave? because it hurts,it's youth. That kind of definition is the biggest problem.</p>
+        <p> You become an idiot as soon as you're tied down there, you the only one ever, Even if you're not perfect you're limited edition, anyway someone wants you, so just do you.</p>
+    </div>
+    
+    <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+        var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+    
 </body>
 </html>
